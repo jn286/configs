@@ -1,0 +1,9 @@
+set -g mouse on
+# used to be set -g mode-mouse on
+set-option -g history-limit 20000
+
+bind s select-layout even-horizontal
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi y send-keys -X copy-selection
+bind-key -T copy-mode-vi r send-keys -X rectangle-toggle
+bind y run-shell "tmux show-buffer | xclip -sel clip -i" \; display-message "Copied tmux buffer to system clipboard"

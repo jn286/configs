@@ -1,0 +1,8 @@
+set nu
+set ttymouse=xterm2
+set mouse=a
+set smartcase
+set hlsearch
+set noshowmatch
+set textwidth=120
+colorscheme desert
